@@ -8,10 +8,15 @@
   <p>All <%= @flats.length %> flats.</p>
   <div class="card-container">
     <% @flats.each do |flat| %>
-      <% img = flat.id.to_s + ".jpg" %>
+      <% img = flat.id.to_s + ".jpg" if flat.id <= 30 %>
+      <% img = flat.img_url %>
       <div class="flat-card">
-        <div style="margin: 0 auto; background: url(<%= asset_path img %>); background-size: cover; width: 100%; height: 230px;">
-        </div>
+        <% if flat.id <= 30 %>
+          <% img = flat.id.to_s + ".jpg" %>
+          <div style="margin: 0 auto; background: url(<%= asset_path img %>); background-size: cover; width: 100%; height: 230px;"></div>
+        <% else %>
+          <div style="margin: 0 auto; background: url(<%= flat.img_url %>); background-size: cover; width: 100%; height: 230px;"></div>
+        <% end %>
         <div class="card-text">
           <h2><%= flat.name %></h2>
           <%= flat.address %>
@@ -27,9 +32,9 @@
         <div class="card-bottom">
           <h4>
             <%= link_to "More info", flat_path(flat.id) %>
-            &nbsp;
+            &nbsp;&nbsp;
             <%= link_to "Edit", edit_flat_path(flat.id) %>
-            &nbsp;
+            &nbsp;&nbsp;
             <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }  %>
           </h4>
         </div>

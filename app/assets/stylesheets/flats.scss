@@ -59,6 +59,38 @@ div {
   padding: 0;
 }
 
+input {
+  border-radius: 4px;
+  border: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+input[type=text] {
+  margin: 8px;
+  padding: 12px 20px 10px 20px;
+  width: 91%;
+}
+
+input[type=submit] {
+  margin: 10px;
+  padding: 15px 24px 14px 24px;
+  background-color: $link-color;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  color: white;
+  float: right;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 .nav {
   margin: -20px 0 0 0;
   padding: 40px 30px 20px 30px;
@@ -70,10 +102,15 @@ div {
   align-items: center;
 }
 
-.btn-top {
-  padding: 12px 20px 10px 20px;
+.btn-top, .btn-top:visited {
+  padding: 13px 20px 10px 20px;
   border: $link-color 1px solid;
   border-radius: 4px;
+}
+
+.btn-top:active, .btn-top:hover {
+  background-color: $link-color;
+  color: white;
 }
 
 .main-container {
@@ -162,17 +199,39 @@ div {
   width: 96%;
   height: 300px;
   padding: 30px 30px;
+  line-height: 24px;
 }
 
 .booking, .details, .share {
   width: 100%;
 }
 
-.details {
-
+.booking {
+  padding: 20px 30px 80px 30px;
+  input[type=text] {
+    margin: 8px 0;
+    width: 85%;
+  }
+  input[type=submit] {
+    margin: 0;
+  }
 }
 
 .share {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.form-container {
+  margin: 30px auto 80px auto;
+  padding: 30px 30px 90px 30px;
+  width: 50vw;
+  background-color: $light-light;
+  border-radius: 4px;
+  p {
+    font-size: 14pt;
+    padding: 0 8px;
+    margin: 4px 0;
+  }
+}
