@@ -1,0 +1,31 @@
+<div class="nav">
+  <h3><%= link_to "Simple Airbnb", flats_path %></h3>
+</div>
+
+<div style="position: relative">
+  <% img = @flat.id.to_s + ".jpg" %>
+  <div style="position: absolute; z-index: 1; background: url(<%= asset_path img %>); background-size: cover; background-position: center; width: 100%; height: 400px;">
+  </div>
+  <div class="flat-container">
+    <div class="content-left">
+      <div class="content title">
+        <h1><%= @flat.name %></h1>
+        <h2><%= @flat.address %></h2>
+      </div>
+      <div class="content description">
+        <%= @flat.description %>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="content booking">
+        <h3>Book this place!</h3>
+      </div>
+      <div class="content details">
+        <h3>Details</h3>
+      </div>
+      <div class="content share">
+        <h4>Share</h4>
+      </div>
+    </div>
+  </div>
+</div>

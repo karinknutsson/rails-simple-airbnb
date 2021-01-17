@@ -1,0 +1,178 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+$light-bg: #E0F0F0;
+$gray-bg: #DDD;
+$light-light: #EEE;
+$link-color: #B0413E;
+$hover-color: #FFBB55;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 12pt;
+}
+
+h1 {
+  font-size: 32pt;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+h4 {
+  font-size: 14pt;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a, a:active, a:hover, a:visited {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: $link-color;
+}
+
+a:active, a:hover {
+  color: $hover-color;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  margin: -20px 0 0 0;
+  padding: 40px 30px 20px 30px;
+  background-color: $gray-bg;
+  width: 94vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-top {
+  padding: 12px 20px 10px 20px;
+  border: $link-color 1px solid;
+  border-radius: 4px;
+}
+
+.main-container {
+  width: 85vw;
+  margin: 80px auto 60px auto;
+}
+
+.card-container {
+  margin: 30px 0 0 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+}
+
+.flat-card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background-color: $light-bg;
+  border: 1pt $gray-bg solid;
+}
+
+.card-text {
+  padding: 16px 30px 10px 30px;
+}
+
+.card-details {
+  font-size: 18pt;
+  display: flex;
+  align-items: center;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 260px;
+  padding: 10px 30px 10px 30px;
+  background-color: white;
+  border-top: 1px solid $gray-bg;
+}
+
+.flat-container {
+  position: absolute;
+  z-index: 5;
+  top: 20vh;
+  left: 5vw;
+  width: 82vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.content-left {
+  width: 67%;
+}
+
+.content-right {
+  width: 25%;
+}
+
+.content {
+  margin: 20px 15px 20px 15px;
+  padding: 20px 30px;
+  background-color: $light-light;
+  border-radius: 4px;
+  border: 1px solid $gray-bg;
+}
+
+.title {
+  width: 96%;
+  height: 100px;
+  h1 {
+    font-size: 22pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 16pt;
+    font-weight: 400;
+  }
+}
+
+.description {
+  width: 96%;
+  height: 300px;
+  padding: 30px 30px;
+}
+
+.booking, .details, .share {
+  width: 100%;
+}
+
+.details {
+
+}
+
+.share {
+
+}
+
